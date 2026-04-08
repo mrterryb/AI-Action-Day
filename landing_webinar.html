@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lead the AI Shift — Free Executive Webinar · Mauritius</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #f4f4f4; color: #1a1a2e; }
+
+  /* HERO */
+  .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%); padding: 60px 40px 50px; text-align: center; }
+  .hero-badge { background: #e94560; display: inline-block; padding: 6px 20px; border-radius: 30px; font-size: 11px; font-weight: 700; color: #fff; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
+  .hero-title { color: #fff; font-size: 38px; font-weight: 900; line-height: 1.15; margin-bottom: 14px; }
+  .hero-title span { color: #e94560; }
+  .hero-subtitle { color: #a8b2d8; font-size: 16px; line-height: 1.6; max-width: 560px; margin: 0 auto 36px; }
+
+  .sessions-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
+  .session-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 18px 28px; text-align: center; min-width: 160px; }
+  .session-label { color: #e94560; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 6px; }
+  .session-date { color: #fff; font-size: 15px; font-weight: 700; }
+  .session-time { color: #e94560; font-size: 18px; font-weight: 900; margin-top: 4px; }
+  .session-or { color: #a8b2d8; display: flex; align-items: center; font-size: 13px; }
+
+  .hero-meta { color: rgba(255,255,255,0.5); font-size: 12px; letter-spacing: 0.5px; }
+  .hero-meta span { margin: 0 10px; }
+
+  /* CTA STRIP */
+  .cta-strip { background: #e94560; padding: 20px 40px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; align-items: center; }
+  .cta-strip a { display: inline-block; background: #fff; color: #e94560; padding: 13px 28px; border-radius: 8px; font-size: 14px; font-weight: 800; text-decoration: none; }
+  .cta-strip a.outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.7); }
+  .cta-strip a:hover { opacity: 0.9; }
+
+  /* SECTIONS */
+  .section { padding: 52px 40px; max-width: 720px; margin: 0 auto; }
+  .section-title { font-size: 22px; font-weight: 800; color: #1a1a2e; margin-bottom: 8px; }
+  .section-title span { color: #e94560; }
+  .section-divider { width: 40px; height: 3px; background: #e94560; margin-bottom: 24px; border-radius: 2px; }
+  .section-intro { color: #555; font-size: 14px; line-height: 1.75; margin-bottom: 28px; }
+
+  /* WHY */
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .why-card { background: #fff; border-radius: 12px; padding: 22px; border-left: 4px solid #e94560; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .why-card h4 { font-size: 14px; font-weight: 700; color: #1a1a2e; margin-bottom: 6px; }
+  .why-card p { font-size: 13px; color: #666; line-height: 1.6; }
+
+  /* PROGRAMME */
+  .programme { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+  .programme-item { display: flex; gap: 0; border-bottom: 1px solid #f0f0f0; }
+  .programme-item:last-child { border-bottom: none; }
+  .prog-time { background: #1a1a2e; color: #e94560; font-size: 12px; font-weight: 700; padding: 18px 16px; min-width: 90px; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.4; }
+  .prog-content { padding: 18px 22px; flex: 1; }
+  .prog-content h4 { font-size: 14px; font-weight: 700; color: #1a1a2e; margin-bottom: 4px; }
+  .prog-content p { font-size: 13px; color: #666; line-height: 1.55; }
+
+  /* OUTCOMES */
+  .outcomes-grid { display: flex; flex-direction: column; gap: 12px; }
+  .outcome { display: flex; align-items: flex-start; gap: 14px; background: #fff; border-radius: 10px; padding: 16px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+  .outcome-icon { width: 32px; height: 32px; border-radius: 50%; background: #e94560; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .outcome-icon svg { width: 16px; height: 16px; fill: #fff; }
+  .outcome-text h4 { font-size: 14px; font-weight: 700; color: #1a1a2e; margin-bottom: 3px; }
+  .outcome-text p { font-size: 13px; color: #666; line-height: 1.55; }
+
+  /* SPEAKER */
+  .speaker-section { background: #1a1a2e; padding: 52px 40px; }
+  .speaker-inner { max-width: 720px; margin: 0 auto; }
+  .speaker-section .section-title { color: #fff; }
+  .speaker-section .section-intro { color: #a8b2d8; }
+  .speaker-card { background: #16213e; border-radius: 14px; padding: 32px; display: flex; gap: 28px; align-items: flex-start; }
+  .speaker-card img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; object-position: center top; border: 3px solid #e94560; flex-shrink: 0; }
+  .speaker-info h3 { color: #fff; font-size: 20px; font-weight: 800; margin-bottom: 4px; }
+  .speaker-info .speaker-role { color: #e94560; font-size: 13px; font-weight: 600; margin-bottom: 16px; }
+  .speaker-info p { color: #a8b2d8; font-size: 13px; line-height: 1.75; margin-bottom: 12px; }
+  .speaker-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+  .tag { background: rgba(233,69,96,0.15); color: #e94560; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; }
+
+  /* WHAT YOU GET */
+  .get-section { background: #fff; padding: 52px 40px; }
+  .get-inner { max-width: 720px; margin: 0 auto; }
+  .get-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .get-item { display: flex; gap: 12px; align-items: flex-start; padding: 16px; background: #f9f9f9; border-radius: 10px; }
+  .get-dot { width: 8px; height: 8px; border-radius: 50%; background: #e94560; flex-shrink: 0; margin-top: 5px; }
+  .get-item span { font-size: 13px; color: #333; line-height: 1.55; font-weight: 500; }
+
+  /* FINAL CTA */
+  .final-cta { background: linear-gradient(135deg, #0f3460, #1a1a2e); padding: 60px 40px; text-align: center; }
+  .final-cta h2 { color: #fff; font-size: 26px; font-weight: 800; margin-bottom: 12px; }
+  .final-cta p { color: #a8b2d8; font-size: 14px; margin-bottom: 32px; }
+  .final-cta .sessions-row { margin-bottom: 32px; }
+  .final-cta .session-card { background: rgba(255,255,255,0.07); }
+  .final-buttons { display: flex; flex-direction: column; gap: 12px; max-width: 480px; margin: 0 auto; }
+  .final-buttons a { display: block; padding: 16px; border-radius: 10px; font-size: 15px; font-weight: 700; text-decoration: none; }
+  .final-buttons .btn-p { background: #e94560; color: #fff; }
+  .final-buttons .btn-s { background: transparent; color: #e94560; border: 2px solid #e94560; }
+  .final-footer { color: rgba(255,255,255,0.35); font-size: 12px; margin-top: 24px; }
+
+  @media (max-width: 600px) {
+    .why-grid, .get-grid { grid-template-columns: 1fr; }
+    .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+    .speaker-tags { justify-content: center; }
+    .hero-title { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">Free Executive Webinar · Mauritius</div>
+  <h1 class="hero-title">Lead the <span>AI Shift</span><br>From reflection to<br>real business impact</h1>
+  <p class="hero-subtitle">A high-impact 45-minute session designed for CEOs and senior leaders who want to understand what AI really changes — for their decisions, their teams, and their business.</p>
+
+  <div class="sessions-row">
+    <div class="session-card">
+      <div class="session-label">Session 1</div>
+      <div class="session-date">Tuesday 15 April 2026</div>
+      <div class="session-time">11:00 AM</div>
+    </div>
+    <div class="session-or">or</div>
+    <div class="session-card">
+      <div class="session-label">Session 2</div>
+      <div class="session-date">Wednesday 16 April 2026</div>
+      <div class="session-time">5:00 PM</div>
+    </div>
+  </div>
+
+  <div class="hero-meta">
+    <span>45 minutes</span>·
+    <span>Free of charge</span>·
+    <span>Online</span>·
+    <span>Mauritius</span>
+  </div>
+</div>
+
+<!-- CTA STRIP -->
+<div class="cta-strip">
+  <div style="width:100%;text-align:center;margin-bottom:14px;">
+    <span style="color:#fff;font-size:18px;font-weight:800;letter-spacing:0.3px;">Reserve My Seat</span>
+  </div>
+  <a href="https://streamyard.com/watch/2YVkyWg2Q8yM">Session 1 · April 15, 11:00 AM</a>
+  <a href="https://streamyard.com/watch/3pwVPH8PyQya" class="outline">Session 2 · April 16, 5:00 PM</a>
+</div>
+
+<!-- WHY ATTEND -->
+<div class="section">
+  <h2 class="section-title">Why this webinar <span>matters</span></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">AI is no longer just another tool to explore. It is reshaping how companies operate, compete, and grow — and redefining the role of leadership itself. Most executives know they need to act. Very few know where to start.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <h4>90% of companies are behind</h4>
+      <p>Most professionals who think they "use AI" are only scratching the surface. The companies that move first are already building a decisive advantage.</p>
+    </div>
+    <div class="why-card">
+      <h4>It's a leadership issue, not a tech issue</h4>
+      <p>AI adoption fails when it's driven by IT alone. The decisions that matter happen at the top — and they need to happen now.</p>
+    </div>
+    <div class="why-card">
+      <h4>Time is the competitive edge</h4>
+      <p>In Mauritius, most businesses have yet to move. The window to be a first mover in your sector is still open — but not for long.</p>
+    </div>
+    <div class="why-card">
+      <h4>Practical, not theoretical</h4>
+      <p>No jargon. No abstract concepts. Designed for busy executives who need clarity, not complexity.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- SPEAKER -->
+<div class="speaker-section">
+  <div class="speaker-inner">
+    <h2 class="section-title">Your <span style="color:#e94560;">speaker</span></h2>
+    <div class="section-divider"></div>
+    <div class="speaker-card">
+      <img src="salime.png" alt="Salime Nassur">
+      <div class="speaker-info">
+        <h3>Salime Nassur</h3>
+        <div class="speaker-role">Founder & CEO, Maars · Former Marketing Director, Google Cloud France & EMEA</div>
+        <p>With nearly 8 years at Google driving large-scale digital transformations across Europe, the Middle East and Africa, Salime Nassur brings a rare combination of strategic depth and practical field experience to AI leadership.</p>
+        <p>As founder of Maars, he has trained over 6,000 professionals across hundreds of organisations in France and the Indian Ocean — helping CEOs, managers and teams move from curiosity to confident, measurable AI adoption.</p>
+        <p>A regular contributor on BFM Business and one of the most sought-after voices on AI transformation in the French-speaking world, Salime is known for his ability to make complex ideas immediately actionable — even for non-technical audiences.</p>
+        <div class="speaker-tags">
+          <span class="tag">Ex-Google Cloud</span>
+          <span class="tag">6,000+ professionals trained</span>
+          <span class="tag">BFM Business</span>
+          <span class="tag">AI Transformation</span>
+          <span class="tag">Leadership</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- FINAL CTA -->
+<div class="final-cta">
+  <h2>Ready to lead the AI shift?</h2>
+  <p>Choose your session and reserve your free seat now. Places are limited.</p>
+  <div style="margin:28px 0 16px;">
+    <span style="color:#fff;font-size:20px;font-weight:800;display:block;margin-bottom:20px;">Reserve My Seat</span>
+  </div>
+  <div class="final-buttons">
+    <a href="https://streamyard.com/watch/2YVkyWg2Q8yM" class="btn-p">Session 1 · Tuesday 15 April · 11:00 AM</a>
+    <a href="https://streamyard.com/watch/3pwVPH8PyQya" class="btn-s">Session 2 · Wednesday 16 April · 5:00 PM</a>
+  </div>
+  <p class="final-footer">Free of charge · Online · 45 minutes · For CEOs and senior leaders in Mauritius</p>
+</div>
+
+</body>
+</html>
